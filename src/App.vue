@@ -1,10 +1,29 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <button class="hamburger-icon" v-on:click="openLeftNav"></button>
+    <LeftNav ref="leftNav" />
   </nav>
   <router-view />
 </template>
+
+<script>
+import LeftNav from "./components/LeftNav.vue";
+
+export default {
+  name: "App",
+  props: {
+    msg: String,
+  },
+  components: {
+    LeftNav,
+  },
+  methods: {
+    openLeftNav() {
+      this.$refs.leftNav.toggleNav();
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
