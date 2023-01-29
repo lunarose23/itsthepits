@@ -1,42 +1,99 @@
 <template>
   <div>
-    <form @submit.prevent="subscribe">
-      <div>
-        <label>
-          Name*
-          <input type="text" v-model="name" required />
-          <span v-if="errors.name" class="error">{{ errors.name }}</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          Email Address
-          <input type="email" v-model="email" />
-          <span v-if="errors.email" class="error">{{ errors.email }}</span>
-        </label>
-      </div>
-      <div>
-        <label>
-          Phone number
-          <input type="tel" v-model="phone" />
-          <span v-if="errors.phone" class="error">{{ errors.phone }}</span>
-        </label>
-      </div>
-      <div>
-        <label class="special">
-          <input type="checkbox" v-model="textMe" />
-          Please text me
-        </label>
-      </div>
-      <div v-if="isBotProtection" class="special2">
-        <p>Please leave this field blank</p>
-        <input type="text" v-model="botProtection" />
-      </div>
-      <div>
-        <button type="submit">Subscribe now</button>
-      </div>
-    </form>
-    <div v-if="message" class="success-message">{{ message }}</div>
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form
+        action="https://gmail.us20.list-manage.com/subscribe/post?u=e94dc23c62fffeb3dfe417944&amp;id=459753a5bb&amp;f_id=00bc67e6f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_self"
+      >
+        <div id="mc_embed_signup_scroll">
+          <h2>Subscribe</h2>
+          <div class="special">
+            <div class="indicates-required">* indicates required</div>
+            <div class="mc-field-group">
+              <label for="mce-NAME">Name</label>
+              <input type="text" value="" name="NAME" class="" id="mce-NAME" />
+              <span id="mce-NAME-HELPERTEXT" class="helper_text"></span>
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address *</label>
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                class="required email"
+                id="mce-EMAIL"
+                required
+              />
+              <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+            </div>
+            <div class="mc-field-group size1of2">
+              <label for="mce-PHONE">Phone Number </label>
+              <input
+                type="text"
+                name="PHONE"
+                class=""
+                value=""
+                id="mce-PHONE"
+              />
+              <span id="mce-PHONE-HELPERTEXT" class="helper_text"></span>
+            </div>
+            <div class="mc-field-group input-group">
+              <strong>Please Text Me </strong>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    value="1"
+                    name="group[6400][1]"
+                    id="mce-group[6400]-6400-0"
+                  />
+                  <label for="mce-group[6400]-6400-0">Yes</label>
+                </li>
+              </ul>
+              <span id="mce-group[6400]-HELPERTEXT" class="helper_text"></span>
+            </div>
+            <div id="mce-responses" class="clear foot">
+              <div
+                class="response"
+                id="mce-error-response"
+                style="display: none"
+              ></div>
+              <div
+                class="response"
+                id="mce-success-response"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px" aria-hidden="true">
+            <input
+              type="text"
+              name="b_e94dc23c62fffeb3dfe417944_459753a5bb"
+              tabindex="-1"
+              value=""
+            />
+          </div>
+          <div class="optionalParent">
+            <div class="clear foot">
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--End mc_embed_signup-->
   </div>
 </template>
 
@@ -102,25 +159,18 @@ export default {
   },
 };
 </script>
-
 <style>
-label {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
+form {
   color: antiquewhite;
 }
-input[type="checkbox"] {
-  width: 3%;
-}
-input {
-  background-color: antiquewhite;
-}
 .special {
-  flex-direction: inherit;
+  display: flex;
+  flex-direction: column;
 }
-.special2 {
-  visibility: hidden;
+.mc-field-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 0.5em;
 }
 </style>

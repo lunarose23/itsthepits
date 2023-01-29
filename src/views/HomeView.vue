@@ -124,7 +124,8 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: #2085ef;
+  font-weight: bold;
 }
 
 p {
@@ -182,12 +183,14 @@ p {
   justify-content: center;
   align-items: center;
   color: black;
+  margin: 0 -5px;
+  flex-direction: column;
 }
 
 .internal p {
-  padding-right: 1em;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  text-align: left;
+  text-align: center;
+  margin: 0 5px;
 }
 </style>

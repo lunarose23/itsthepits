@@ -6,6 +6,10 @@
     <p>11 Cedar Street</p>
     <p>Beverly, Massachusetts 01915</p>
     <p>978-317-7607</p>
-    <p>FACEBOOK</p>
+    <p>
+      <a href="https://www.facebook.com/ItsThePitsBbq" target="_blank"
+        >VIEW FACEBOOK PAGE
+      </a>
+    </p>
   </div>
 </template>
