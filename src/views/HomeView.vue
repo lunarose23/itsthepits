@@ -1,28 +1,22 @@
 <template>
   <div id="splash" class="splash"></div>
   <nav>
-    <a
-      class="top-nav-item"
-      href="#home"
-      v-on:click.prevent="scrollPageTo('splash')"
+    <a class="top-nav-item" href="/" v-on:click="scrollPageTo('splash')"
       >Home
     </a>
     <a
       class="top-nav-item"
-      href="#catering"
-      v-on:click.prevent="scrollPageTo('catering')"
+      href="/#catering"
+      v-on:click="scrollPageTo('catering')"
       >Catering
     </a>
-    <a
-      class="top-nav-item"
-      href="#pickup"
-      v-on:click.prevent="scrollPageTo('pickup')"
+    <a class="top-nav-item" href="/#pickup" v-on:click="scrollPageTo('pickup')"
       >Pickup
     </a>
     <a
       class="top-nav-item"
-      href="#contact"
-      v-on:click.prevent="scrollPageTo('contact')"
+      href="/#contact"
+      v-on:click="scrollPageTo('contact')"
       >Contact
     </a>
   </nav>
@@ -32,7 +26,7 @@
   <div id="catering" class="catering" data-anchor="catering">
     <LargeCatering></LargeCatering>
   </div>
-  <div id="subscribe" class="subscribe" data-anchor="subscribe">
+  <div id="pickup" class="subscribe" data-anchor="subscribe">
     <SubscribeNow></SubscribeNow>
   </div>
   <div id="contact" class="contact" data-anchor="contact">
@@ -84,7 +78,7 @@ nav {
 }
 
 .top-nav-item {
-  color: antiquewhite;
+  color: rgb(239, 157, 81);
   padding: 0.5em 1em;
   text-align: center;
   font-size: 1.3em;
@@ -110,11 +104,13 @@ h2 {
   font-family: "Days One", sans-serif;
   font-size: 6vw;
   color: antiquewhite;
+  margin-top: 1em;
 }
 
 h3 {
   margin: 40px 0 0;
   font-size: 4vw;
+  color: rgb(239, 157, 81);
 }
 
 ul {
@@ -151,6 +147,10 @@ p {
 .contact {
   overflow-y: scroll;
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .surround {

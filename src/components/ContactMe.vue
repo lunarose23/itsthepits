@@ -9,15 +9,3 @@
     <p>FACEBOOK</p>
   </div>
 </template>
-
-<style>
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  p {
-    margin-left: 1em;
-  }
-}
-</style>

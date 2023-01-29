@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
 const routes = [
@@ -8,24 +8,24 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/catering",
+    path: "/#catering",
     name: "catering",
     component: HomeView,
   },
   {
-    path: "/pickup",
+    path: "/#pickup",
     name: "pickup",
     component: HomeView,
   },
   {
-    path: "/contact",
+    path: "/#contact",
     name: "contact",
     component: HomeView,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
