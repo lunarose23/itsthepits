@@ -75,6 +75,7 @@ nav {
   width: 100%;
   z-index: 20;
   background-color: rgb(30, 27, 27);
+  font-size: 0.8em;
 }
 
 .top-nav-item {
